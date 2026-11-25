@@ -1,0 +1,26 @@
+OrbitSchool 6.2 — One-App Classroom
+===================================
+
+The classroom experience is now integrated into the main OrbitSchool app.
+
+- Removed the separate classroom Student, Teacher and Admin web portals from this build.
+- Added Host / Enter Class inside the main app.
+- Teachers sign in with an email OTP, create a classroom and receive an 8-character code and invitation link.
+- Students enter the code or open the invitation link to join.
+- Added an in-app live room with camera, microphone, participant list, text chat and hand raise.
+- Added teacher-only screen sharing and a local class snapshot download.
+- Added teacher reports for XP, coins, quizzes, flashcards reviewed, streak, current activity and recent quiz result.
+- Added email OTP sign-up and sign-in. No app password is stored.
+- Added per-email OTP request limits with a higher network-level ceiling to support school Wi-Fi shared by many students.
+- Limited the small-group peer-to-peer live room to eight students plus the teacher.
+- Kept the existing OrbitSchool learning tools and SDES GRAM project content in the same app.
+
+Operational note:
+The app, classroom service and private on-disk store are bundled in one ZIP. The school hosts one HTTPS copy for all users. This internal service is required for cross-device class codes, OTP delivery, live signaling and shared progress; it has no separate user-facing Admin portal. Email OTP needs the school-owned sender mailbox to be configured once by the adult managing the hosting.
+
+Testing:
+- Node syntax checks passed for the server and classroom/account scripts.
+- Three inline app JavaScript blocks passed Node syntax checks.
+- API integration checks passed for OTP signup/login, wrong-code rejection, duplicate account protection, authenticated class creation, student join, learning-stat reporting, RTC signaling, leaving and ending a class.
+- Twenty-two static asset references checked; no missing local references.
+- Real email delivery and real multi-device camera/screen-sharing were not tested because sender credentials and external school devices were not available.

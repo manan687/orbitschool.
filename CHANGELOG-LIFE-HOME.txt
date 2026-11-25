@@ -1,0 +1,61 @@
+ORBITSCHOOL — LIFE & HOME UPGRADE
+================================
+
+This additive update expands the character, pet, room and local item economy while preserving the existing OrbitSchool study tools and AI integration.
+
+CHARACTER STUDIO
+----------------
+- Added boy and girl character style options.
+- Expanded skin-tone choices.
+- Added coloured shirts, pants, joggers, shorts and a skirt option.
+- Expanded hairstyles and hair colours.
+- Added headwear, glasses/accessories, shoes and facial expressions.
+- Added outfit randomisation, saved looks and emote actions.
+- Added a 3D character preview using Three.js when available, with a canvas-drawn animated preview fallback.
+
+PET SANCTUARY
+-------------
+- Expanded the companion catalogue to eight pets: Comet Pup, Nebula Kitten, Cloud Bunny, Ember Fox, Nova Dragon, Bamboo Panda, Frost Penguin and Ember Red Panda.
+- Added pet naming, a bond counter, care statistics, feeding, play, petting and grooming actions.
+- Added pet accessories and snack purchases.
+- Added individual 3D pet details and idle motion when Three.js is available, with an animated canvas fallback.
+- Pet care is optional and does not affect study streaks. Pet actions do not award study XP or coins.
+
+3D ROOM
+-------
+- Expanded the room with a study corner, bed, rugs, bookshelf, plant, pet bed, aquarium, projector, trophy shelf, window, guitar, beanbag, wall art, gaming chair, ceiling stars, planet mobile and window seat.
+- Added six wall themes and four floor themes, with level-gated coin purchases.
+- Added a live 3D room scene with drag-to-orbit and scroll-to-zoom controls when Three.js is available.
+- Added avatar and pet presence, room lighting control, furniture placement/removal and a canvas fallback.
+
+ECONOMY
+-------
+- Uses the app's existing XP, level and Orbit Coins values.
+- Cosmetic items, companions, furniture and room themes have coin prices and level requirements.
+- Study tools remain free; XP determines level and is not spent.
+- Purchases are stored locally in this browser build. Server-backed ownership and anti-tamper validation are not included.
+
+ABOUT US
+--------
+- Added clickable developer contribution cards without ordinal ranking.
+- Arihaan Mahajan: UI Designer — OrbitSchool.
+- Manan Mahajan: Creator of Orbiter AI and contributor to OrbitSchool's foundation.
+- Aarav Sharma: Creator of AI Vidyalaya; its original concepts and approach informed OrbitSchool's direction; also established the base structure of SDES GRAM.
+- Virat Sharma: UI Designer — SDES GRAM.
+
+TECHNICAL NOTES
+---------------
+- New functionality is in orbit-life.js and orbit-life.css.
+- Existing study, AI, planner, flashcard, game and school modules are retained.
+- The service-worker cache version is updated to include the new files.
+- Three.js is loaded by the existing app from its external CDN. The 3D previews require that library and WebGL; animated canvas previews are used if 3D cannot initialise.
+- The build is a browser/PWA project, not a signed Android App Bundle.
+- Full interactive testing on physical Chromebook and Android devices remains to be completed.
+
+
+ORITSCHOOL CHARACTER / MARKETPLACE CORRECTION
+- Restored the original large-head, articulated block-style Orbit character proportions in the Avatar Studio, preserving the expanded clothing, expression and accessory options.
+- Dashboard and world previews now use the same selected Avatar Studio look, including clothing colours, hair, skin, headwear and expression.
+- Removed the pet shop, pet catalogue, pet-care panels, pet room furniture and pet/companion visuals from the visible OrbitSchool experience.
+- Replaced Pet Sanctuary navigation with Marketplace for wardrobe and room decorations. Replaced Pet Paradise with Marketplace Plaza.
+- Restored the Special Thanks · Mentor & Guide section for Mr. Arvind Mahajan in About Us.

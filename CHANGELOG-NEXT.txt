@@ -1,0 +1,45 @@
+ORBIT NEXT UNIVERSE — ADDITIVE FEATURE BUILD
+==============================================
+
+BASE
+- Started from the uploaded OrbitSchool 2.2 ZIP.
+- Preserved the existing AI Netlify function, study modules, planner, flashcards, PWA assets and service-worker setup.
+- Added a separate orbit-next.js / orbit-next.css layer rather than replacing the existing app architecture.
+
+NEW EXPERIENCE
+- Orbit World: first-pass explorable 3D hub, cute block avatar, keyboard and touch directional controls, draggable camera and six themed destination variations.
+- Avatar Studio: procedural 3D character, five palettes, four headwear choices, wave/celebration controls and local outfit saving.
+- Trophy Galaxy: 60 achievement entries across Learning, Mastery, Consistency, Focus, Exploration and Arcade, with distinct icons, rarity tiers and locally measured progress.
+- Focus Timer: custom duration from 5 to 120 minutes, presets, subject/task labels, pause/resume/reset, five-minute break and timestamp-based local session history.
+- Orbit Arcade: eight playable games — Equation Rush, Memory Galaxy, Word Forge, World Explorer, Timeline Quest, Asteroid Escape, Orbit Runner and Galaxy Builder.
+- Five study games and three entertainment/creative games.
+- New experience navigation, responsive CSS and versioned PWA shell cache.
+
+COMPATIBILITY HOTFIX (AFTER FIRST CHROMEBOOK TEST)
+- The first package showed an unavailable 3D preview on the reported Chromebook screenshot.
+- Root cause in the inspected code path: the scene depended on the external Three.js CDN and replaced the whole world stage with an emoji/text fallback whenever Three.js or WebGL was unavailable.
+- Replaced the dead-end world fallback with an interactive, locally rendered isometric canvas scene. It retains the world HUD, destinations and touch controls, and supports keyboard movement, camera dragging, character emotes and a companion orb.
+- Added a matching locally rendered cute block-character preview for Avatar Studio when Three.js/WebGL is unavailable.
+- The Three.js renderer remains available as the enhanced WebGL path when the CDN and WebGL both work.
+- This compatibility view is a 2.5D canvas renderer, not a substitute claim of full WebGL 3D.
+
+QUALITY IMPROVEMENTS
+- Avatar canvas is explicitly sized to its responsive stage.
+- Builder save data is length-checked and values are range-validated before rendering.
+- Completed focus sessions record distinct subjects for achievement progress.
+- Flashcard review actions update the new local achievement counters.
+- The new layer is additive and does not overwrite the existing Orbit AI server function.
+
+TESTS COMPLETED
+- JavaScript syntax checks for orbit-next.js, orbit-v2.js, orbit-2.2.js, netlify/functions/orbit-chat.js and sw.js.
+- Node VM UI harness checked main new views and all eight game launch screens with stubbed browser globals.
+- PWA manifest and package structure checks.
+
+LIMITATIONS
+- Orbit World is a first-pass 3D hub with themed variations, not six unique, fully modelled open-world maps. There are no NPCs, physics/collision system or connected multiplayer.
+- Avatar customisation is an initial procedural model with palette/headwear controls, not a full rigging and outfit marketplace.
+- The 60-entry badge catalogue contains conditions for some systems that need future event integrations; not every badge is currently unlockable through the new layer alone.
+- Local profiles, achievements, focus records, builder designs, scores and rewards are browser-local and are not cloud-synced or tamper-resistant.
+- AI still depends on the preserved Netlify function and GROQ_API_KEY; backend authentication, quotas and abuse protection remain required.
+- Full real-device/browser QA was not completed. The compatibility renderer has static code and canvas-draw harness checks; it still requires testing on the user's Chromebook and Android devices.
+- This is a web/PWA project, not a signed Android App Bundle. Play Store submission work remains.

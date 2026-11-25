@@ -1,0 +1,24 @@
+{
+  "packageId": "com.yourname.orbitschool",
+  "host": "YOUR-SITE.netlify.app",
+  "name": "OrbitSchool",
+  "launcherName": "OrbitSchool",
+  "display": "standalone",
+  "themeColor": "#4F46E5",
+  "navigationColor": "#4F46E5",
+  "backgroundColor": "#0F172A",
+  "enableNotifications": false,
+  "startUrl": "/index.html",
+  "iconUrl": "https://YOUR-SITE.netlify.app/icons/orbit-icon-512.png",
+  "maskableIconUrl": "https://YOUR-SITE.netlify.app/icons/orbit-icon-512-maskable.png",
+  "webManifestUrl": "https://YOUR-SITE.netlify.app/manifest.webmanifest",
+  "appVersionCode": 1,
+  "appVersionName": "1.0.0",
+  "signingKey": {
+    "path": "./orbitschool.keystore",
+    "alias": "orbitschool"
+  },
+  "fallbackType": "customtabs",
+  "orientation": "default",
+  "isChromeOSOnly": false
+}

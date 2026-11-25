@@ -1,0 +1,29 @@
+OrbitSchool 7.0 - Accounts, Friends, Chat and Duels
+====================================================
+Removed
+- Email sign-in and email codes (no emails are sent or stored any more).
+- The classroom: Host / Enter Class, the live room (camera, microphone, screen sharing), the floating classroom button, and the classroom server.
+
+Added
+- Username and password accounts. Passwords are stored only as scrypt hashes.
+- Progress follows the account: sign in on any device with the same username and password and your progress is restored.
+- Community: send a friend request by username; the other person accepts or declines.
+- Friends: see who is online; chat with friends (messages are stripped of markup).
+- Duels: challenge a friend to a 5-question maths duel. Each of you answers in your own time; the winner is the one with more correct answers. Results show when you both finish.
+- Sign out button in Community.
+
+Fixed
+- The first-run reward pop-up could cover the sign-in form. It is now hidden while the sign-in screen is showing.
+
+Run
+- node orbit-server.js  (PORT=8080 by default). Serve it over HTTPS so passwords travel encrypted.
+- Netlify (static hosting) cannot run orbit-server.js. Chat, friends and duels need this server running.
+- Data is kept in orbit-data.json on the server. Back it up.
+
+Not included yet
+- Password reset (there is no email, so a school admin must reset by editing orbit-data.json for now).
+- Duel results are not shown live; players see them when both have finished.
+
+FIX: Sign-up did nothing when the app was not opened from the OrbitSchool server.
+- The error message was being cleared straight away. It now stays on screen.
+- When the page can't reach the server, it says to run "node orbit-server.js" and open the app from that address.

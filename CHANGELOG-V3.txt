@@ -1,0 +1,61 @@
+OrbitSchool — NEXT UNIVERSE V3 FEATURE UPDATE
+==========================================
+
+This build extends the previously fixed OrbitSchool Next Universe package. It does not replace the existing Orbit AI Netlify function or original study modules.
+
+NAVIGATION — 22 MAIN PANELS
+- Reorganised the main navigation into exactly 22 entries.
+- Grouped related tools into Study Board & Insights, Study Lab, Community Hub and Creator Workshop.
+- Kept the underlying legacy modules accessible through their relevant grouped destinations.
+
+ORBIT WORLD
+- Expanded the destination list to 11 destinations: Orbit Central, Academy Island, Math Meadows, Science Bay, Word Forest, History Ruins, GeoGlobe Isles, Arcade Nebula, Trophy Galaxy, Pet Paradise and Creator Island.
+- Added destination-specific landmarks in the 3D scene.
+- Added short subject-island challenge sets and activity links.
+- Kept the Three.js WebGL scene when available and the locally rendered isometric compatibility scene when WebGL is unavailable.
+- The compatibility view remains a 2.5D canvas experience, not full WebGL 3D.
+
+AVATAR STUDIO
+- Expanded customisation options for palettes, hairstyles, outfits, hats, accessories and facial expressions.
+- Added controls for hair, outfit, accessory and face options.
+- Expanded saved outfit support.
+- Updated the About page developer credits to:
+  1ST — Arihaan Mahajan
+  2ND — Manan Mahajan
+  3RD — Aarav Sharma
+  3RD — Virat Sharma
+
+FLASHCARDS
+- Replaced the instant content swap with a two-sided CSS 3D flip card.
+- Added a 580 ms rotateY flip animation with reduced-motion support.
+- Kept the current study session in place while flipping; the page is not re-rendered for the flip.
+- Added keyboard Space/Enter activation and Again / Hard / Good / Easy review actions.
+- Kept safe escaping for card text.
+
+ORBIT LINGO
+- Added ten beginner language paths: Spanish, French, German, Italian, Portuguese, Hindi, Japanese, Korean, Mandarin and Arabic.
+- Each path contains six starter units with vocabulary/sentence tile practice and speech synthesis where the device supports it.
+- Added a language-specific AI practice chat using the existing Netlify Orbit AI endpoint.
+- Saved progress and tutor conversation history locally.
+- This is a starter learning pathway, not a complete CEFR curriculum or a claim of Duolingo parity.
+
+SERVICE WORKER
+- Added orbit-expansion.js and orbit-next.css to the app shell.
+- Bumped the cache version to avoid stale app-shell files after upgrading.
+
+VALIDATION COMPLETED
+- JavaScript syntax checks for the main app scripts, expansion layer, service worker and existing Netlify AI function.
+- Static inline-script syntax checks extracted from index.html.
+- Checked that all 22 navigation identifiers and 11 world destinations are present.
+- Checked the 60-entry badge catalogue and game registry.
+- Parsed the PWA manifest and checked local HTML asset references.
+- ZIP integrity test.
+
+LIMITATIONS / NOT A PLAY STORE RELEASE
+- A complete interactive browser and physical-device QA pass has not been completed.
+- The world remains a first implementation with themed destinations and island quizzes; it is not a large open-world game with NPC dialogue, physics, collisions or multiplayer.
+- The character is a procedural customisable model, not a finished production rig or full marketplace.
+- Lingo has six starter units per language and basic speech synthesis; it is not a full professionally reviewed course or Duolingo-equivalent service.
+- Progress and rewards remain local-device data; no real cloud account or tamper-resistant global leaderboard has been added.
+- AI chat still requires Netlify deployment and GROQ_API_KEY. Authentication, rate limits, quotas and moderation need production implementation.
+- This is a PWA/web project, not a signed Android App Bundle. Play Store publishing requirements and release testing remain.

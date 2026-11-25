@@ -1,0 +1,45 @@
+OrbitSchool 2.2 — CHANGELOG
+========================
+
+BOSS BATTLE REBUILD
+- Boss Levels now start with Class → Subject → Chapter selection.
+- Added Starter, Standard and Challenge difficulty modes.
+- Added 12 reviewed Class 7 starter chapter packs across Mathematics, Science, History, Geography, English and Computer Science.
+- Other classes and custom chapters can request age-appropriate question generation through the configured Netlify AI function.
+- Each question locks immediately after the first answer. Repeated clicks cannot damage the same boss question more than once.
+- Correct answers do not award instant coins. Battle rewards are calculated after the complete question set.
+- Mastery threshold required to defeat a boss: 60% for Starter, 70% for Standard, and 100% for Challenge.
+- First-clear rewards are limited to once per chapter per local day, with no more than five rewarded chapter battles per local day on this device.
+- Boss battle explanations and answer review are shown at the end of the challenge.
+- Retired the old rapid-reward attackBoss handler from the visible boss experience.
+
+AI FLASHCARDS
+- Replaced the old three-card offline template fallback with a real Netlify AI request.
+- Added structured JSON output and server-side response validation for flashcards.
+- The UI now reports a clear setup/service error instead of presenting generic templates as AI-generated content.
+- Escaped AI-generated card text when rendering editable input fields.
+
+PROFILE & PWA
+- New local-profile creation clears Orbit 2.x local state, including gems, pets, reminders, arcade progress, room decorations, Lingo progress and boss daily reward claims.
+- Updated service-worker cache version and included orbit-2.2.js in the app shell.
+- Service worker now removes only older Orbit shell caches, not unrelated origin caches.
+
+SERVER FUNCTION
+- Added structured `boss-questions` and `flashcards` modes, input-size guard, schema validation and no-store response headers.
+- Removed wildcard CORS by default. Same-origin Netlify deployment is the default; ALLOWED_ORIGIN can be set for a trusted separate front end.
+
+TESTS RUN
+- JavaScript syntax checks for the new module, Netlify function and service worker.
+- Static inline-script syntax checks for index.html.
+- Unit harness verified class/subject/chapter battle setup, duplicate-click lock, no per-question rewards, one first-clear reward, and no same-day replay reward.
+- Content validation verified all 12 Class 7 starter packs have valid four-option question records.
+- Profile-reset harness verified Orbit 2.x local data is cleared on new local profile creation.
+- Mocked Netlify handler tests verified structured question and flashcard response validation.
+
+KNOWN LIMITATIONS
+- This is still a browser/PWA project with local profiles, not a real cloud-account system.
+- Local reward limits can be altered by a determined user through browser storage. A server-side reward ledger is required for production anti-cheat.
+- AI question generation and AI flashcards require the Netlify function to be deployed with GROQ_API_KEY configured.
+- AI-generated learning material can contain mistakes and should be checked against trusted course material.
+- This package does not yet include a signed Android App Bundle, cloud sync, real online multiplayer or push notifications delivered while the app is closed.
+- A full interactive browser/device visual test was not completed in this build environment.

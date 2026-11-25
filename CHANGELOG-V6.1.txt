@@ -1,0 +1,27 @@
+OrbitSchool v6.1 — offline libraries and cache update
+=====================================================
+CHANGED
+- Tailwind CSS is now bundled in vendor/tailwind-play.js (the same play build the CDN serves). The app no longer depends on cdn.tailwindcss.com to look right.
+- JSZip 3.10.1 is bundled in vendor/jszip-3.10.1.min.js (same version as before, now local).
+- Both files are in the service worker's offline cache list.
+- Cache version bumped to orbitschool-shell-vendor-v19 so phones pick up the new files.
+
+STILL EXTERNAL (with fallbacks)
+- Three.js r152 (3D world, Avatar Studio). If it cannot load, the isometric 2.5D view is used.
+- Google Fonts (Fredoka). If blocked, the system font is used.
+
+TESTED
+- Phone (Pixel 7 emulation) and laptop (1366x768): no sideways scrolling, no page errors.
+- Same checks with the CDNs blocked: layout and Tailwind styling still applied.
+
+NOT TESTED HERE
+- Real Android phones, Chromebooks, and the 3D world on real GPUs.
+
+CLASSROOM REPORTS AND TEACHER-LED LESSONS UPDATE
+- Rebuilt the student classroom client around a clear “Enter Class” action and a shared live lesson board.
+- Teachers can create classrooms, share student join codes, start/update/end lessons, review the roster and export CSV class reports.
+- Student progress reports include XP, coins, quiz totals, cards reviewed, mistakes cleared, boss/arcade activity, streak, recent quiz and top chapter scores.
+- Added an admin.html portal for server-protected whole-school reports. Configure ORBIT_ADMIN_KEY (minimum 16 characters) in the Node server environment; admin sessions expire after eight hours.
+- Added leave-class removal, duplicate nickname validation, class close handling, safer teacher-key POST authentication, and API-aware service-worker caching.
+- Fixed the old service-worker navigation cache path so teacher/admin pages cannot overwrite the cached OrbitSchool home page; live classroom API responses are no longer cached.
+- Classroom reports are client-submitted activity snapshots, not verified school marks. Central accounts and a tamper-resistant progress ledger are still separate future work.

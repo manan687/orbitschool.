@@ -1,0 +1,84 @@
+{
+  "name": "OrbitSchool — Next Universe",
+  "short_name": "OrbitSchool",
+  "description": "A gamified study companion: JKBOSE and CBSE syllabus, quizzes, language lessons, a calendar planner and a study arcade.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0B0F19",
+  "theme_color": "#4F46E5",
+  "icons": [
+    {
+      "src": "icons/orbit-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/orbit-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/orbit-icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "id": "./",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": [
+    "education",
+    "productivity"
+  ],
+  "shortcuts": [
+    {
+      "name": "Study Board",
+      "short_name": "Study",
+      "url": "./index.html#studyboard",
+      "icons": [
+        {
+          "src": "icons/orbit-icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Orbit Lingo",
+      "short_name": "Lingo",
+      "url": "./index.html#lingua",
+      "icons": [
+        {
+          "src": "icons/orbit-icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Planner",
+      "short_name": "Planner",
+      "url": "./index.html#planner",
+      "icons": [
+        {
+          "src": "icons/orbit-icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Arcade",
+      "short_name": "Arcade",
+      "url": "./index.html#arcade",
+      "icons": [
+        {
+          "src": "icons/orbit-icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

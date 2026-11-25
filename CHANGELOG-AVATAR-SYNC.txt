@@ -1,0 +1,19 @@
+ORBITSCHOOL — AVATAR SYNC & PET FEATURE REMOVAL
+================================================
+
+- Restored the original large-head, square, articulated block-character proportions in Avatar Studio and the shared 3D room model.
+- Rebuilt the compact dashboard/header avatar as a colourful block-style SVG generated from the currently selected Avatar Studio settings: character style, skin, shirt, pants, hair, hair colour, expression, headwear, accessories and shoes.
+- Kept the original SVG avatar renderer for other profile/avatar records so community previews are not all replaced with the current user's character.
+- Added colourful dashboard avatar framing and retained the existing idle/emote animation classes.
+- Restored the About Us mentor card for Mr. Arvind Mahajan with a dedicated visual style.
+- Removed the pet shop, pet navigation label, pet badge, pet dashboard tile, pet/companion world visuals and pet reward hooks.
+- Renamed the shop destination to Marketplace and kept wardrobe/furniture/theme purchases.
+- Removed obsolete pet state from the main app profile and updated the service-worker cache version.
+
+The project remains a browser/PWA app. The update has not been packaged as a signed Android App Bundle.
+
+- Removed Pet Paradise from Island Missions and removed the floating companion orb from the world view.
+- Removed obsolete pet-only CSS and profile-reset initialisation; the old storage key is only cleared during account reset.
+- Updated the Marketplace navigation label in English, Hindi and Urdu.
+- Avatar equip, randomise and saved-look actions now refresh the header preview immediately.
+- Legacy pet data is cleared from local storage at startup and ignored by current profile state.

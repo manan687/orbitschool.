@@ -1,0 +1,17 @@
+ORBIT SCHOOL — CHROMEBOOK LOCAL TEST
+
+1. Turn on Linux (Settings > About ChromeOS > Developers > Linux development environment).
+2. Extract this ZIP and copy the folder into Linux files.
+3. Open Terminal:
+
+   cd ~/OrbitSchool-One-App
+   npm install
+   ORBIT_DEV_OTP=true npm start
+
+4. In Chrome open http://localhost:8080
+5. Create an account. For local testing, the OTP appears in Terminal.
+6. Use a second Chrome window/tab to test a student joining a class. Teachers can share their screen and save a class snapshot from the live room.
+
+ORBIT_DEV_OTP is only for local testing. For real email OTP, configure the school SMTP settings as shown in .env.example and README.txt.
+
+Camera/microphone/screen share are allowed on localhost during testing. For other devices, deploy to an HTTPS Node.js host and have all users open the same address.

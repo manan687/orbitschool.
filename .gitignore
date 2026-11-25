@@ -1,0 +1,6 @@
+orbit-data.json
+orbit-data.json.tmp
+orbit-key.enc
+.env
+node_modules/
+*.log

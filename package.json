@@ -1,0 +1,15 @@
+{
+  "name": "orbitschool",
+  "version": "7.0.0",
+  "private": true,
+  "description": "OrbitSchool: study app with accounts, friends, chat and duels",
+  "main": "orbit-server.js",
+  "scripts": {
+    "start": "node orbit-server.js",
+    "check": "node --check orbit-server.js && node --check orbit-social.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {}
+}
